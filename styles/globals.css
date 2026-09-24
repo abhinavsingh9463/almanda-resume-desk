@@ -1,0 +1,35 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font: inherit;
+}
+
+textarea, input {
+  font: inherit;
+}
+
+/* Keep the hero readable on phones instead of overflowing at a fixed 56px */
+.hero-title {
+  font-size: clamp(32px, 7vw, 56px) !important;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 40px 18px 64px !important;
+  }
+  .doc-cards {
+    gap: 16px !important;
+  }
+}
